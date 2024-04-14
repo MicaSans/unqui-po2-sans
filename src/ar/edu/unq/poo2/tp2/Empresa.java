@@ -3,8 +3,8 @@ package ar.edu.unq.poo2.tp2;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Empresa {
+	
 	//Variables de instancia
 	private String nombreEmpresa;
 	private String cuit;
@@ -16,6 +16,44 @@ public class Empresa {
 		this.setNombre(nombre);
 		this.setCuit(cuitEmpresa);
 		this.empleados = new ArrayList<Empleado>();
+		this.recibosDeSueldo = new ArrayList<ReciboDeSueldo>();
+	}
+	
+	//Metodos
+	public float totalSueldosNetos() {
+		float totalNetos = 0;
+		for (Empleado empleado : empleados) {
+			totalNetos += empleado.calcularSueldoNeto();
+		}
+		return totalNetos;
+	}
+	
+	public float totalSueldosBrutos() {
+		float totalBrutos = 0;
+		for (Empleado empleado : empleados) {
+			totalBrutos += empleado.calcularSueldoBruto();
+		}
+		return totalBrutos;
+	}
+	
+	public float totalRetenciones() {
+		float totalRet = 0;
+		for (Empleado empleado : empleados) {
+			totalRet += empleado.calcularRetenciones();
+		}
+		return totalRet;
+	}
+	
+	public int totalEmpleados() {
+		return empleados.size();
+	}
+	
+	public void contratarEmpleado(Empleado empleado) {
+		empleados.add(empleado);
+	}
+	
+	public void desvincularEmpleado(Empleado empleado) {
+		empleados.remove(empleado);
 	}
 	
 	//Getters
@@ -54,42 +92,5 @@ public class Empresa {
 
 	public void setEmpleados(List<Empleado> empleados) {
 		this.empleados = empleados;
-	}
-	
-	//Metodos
-	public float totalSueldosNetos() {
-		float totalNetos = 0;
-		for (Empleado empleado : empleados) {
-			totalNetos += empleado.calcularSueldoNeto();
-		}
-		return totalNetos;
-	}
-	
-	public float totalSueldosBrutos() {
-		float totalBrutos = 0;
-		for (Empleado empleado : empleados) {
-			totalBrutos += empleado.calcularSueldoBruto();
-		}
-		return totalBrutos;
-	}
-	
-	public float totalRetenciones() {
-		float totalRet = 0;
-		for (Empleado empleado : empleados) {
-			totalRet += empleado.calcularRetenciones();
-		}
-		return totalRet;
-	}
-	
-	public int totalEmpleados() {
-		return empleados.size();
-	}
-	
-	public void contratarEmpleado(Empleado empleado) {
-		empleados.add(empleado);
-	}
-	
-	public void desvincularEmpleado(Empleado empleado) {
-		empleados.remove(empleado);
 	}
 }

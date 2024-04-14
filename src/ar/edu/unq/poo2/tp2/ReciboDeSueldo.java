@@ -3,22 +3,13 @@ package ar.edu.unq.poo2.tp2;
 import java.time.LocalDate;
 
 public class ReciboDeSueldo {
+	
 	//Variables de instancia
 	private LocalDate fechaDeEmision;
 	
 	//Constructor
 	public ReciboDeSueldo(LocalDate fechaDeEmisionRecibo) {
 		this.setFechaDeEmision(fechaDeEmisionRecibo);
-	}
-
-	//Getter
-	public LocalDate getFechaDeEmision() {
-		return fechaDeEmision;
-	}
-
-	//Setter
-	public void setFechaDeEmision(LocalDate fechaDeEmision) {
-		this.fechaDeEmision = fechaDeEmision;
 	}
 	
 	//Metodos
@@ -36,5 +27,15 @@ public class ReciboDeSueldo {
 	
 	public float obtenerSueldoNeto(Empleado empleado) {
 		return empleado.calcularSueldoNeto();
+	}
+
+	//Getter
+	public LocalDate getFechaDeEmision() {
+		return fechaDeEmision;
+	}
+
+	//Setter
+	public void setFechaDeEmision(LocalDate fechaDeEmision) {
+		this.fechaDeEmision = fechaDeEmision;
 	}
 }

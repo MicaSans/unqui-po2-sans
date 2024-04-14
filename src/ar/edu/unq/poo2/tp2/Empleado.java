@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.Period;
 
 public abstract class Empleado {
+	
 	//Variables de instancia
 	private String nombre;
 	private String direccion;
@@ -18,40 +19,6 @@ public abstract class Empleado {
 		this.setSueldoBasico(sueldoBasicoEmpleado);
 		this.fechaDeNac = fechaDeNacEmpleado;
 		this.setEstadoCivil(estadoCivilEmpleado);
-	}
-	
-	//Setters
-	public void setSueldoBasico(float sueldoBasico) {
-		this.sueldoBasico = sueldoBasico;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
-	}
-
-	public void setEstadoCivil(String estadoCivil) {
-		this.estadoCivil = estadoCivil;
-	}
-	
-	//Getters
-	public float getSueldoBasico() {
-		return sueldoBasico;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public String getDireccion() {
-		return direccion;
-	}
-
-	public String getEstadoCivil() {
-		return estadoCivil;
 	}
 	
 	//Metodos
@@ -76,5 +43,39 @@ public abstract class Empleado {
 	public float calcularSueldoNeto() {
 		float sueldoNeto = this.calcularSueldoBruto() - this.calcularRetenciones();
 		return sueldoNeto;
+	}
+	
+	//Getters
+	public float getSueldoBasico() {
+		return sueldoBasico;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public String getEstadoCivil() {
+		return estadoCivil;
+	}
+	
+	//Setters
+	public void setSueldoBasico(float sueldoBasico) {
+		this.sueldoBasico = sueldoBasico;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
+	public void setEstadoCivil(String estadoCivil) {
+		this.estadoCivil = estadoCivil;
 	}
 }
