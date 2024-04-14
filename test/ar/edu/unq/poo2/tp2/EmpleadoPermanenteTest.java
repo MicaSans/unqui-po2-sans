@@ -16,7 +16,6 @@ class EmpleadoPermanenteTest {
 	void setUp() throws Exception {
 		//Creo un empleado permanente
 		empleado1 = new EmpleadoPermanente ("David","Berutti 5772",200000,LocalDate.of(1988, 03, 20),"Divorciado",1,10,true);
-		
 	}
 
 	@Test
