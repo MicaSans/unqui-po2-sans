@@ -23,9 +23,7 @@ public abstract class Empleado {
 	
 	//Metodos
 	public abstract float calcularObraSocial();
-	
 	public abstract float calcularAportesJubilatorios();
-	
 	public abstract float calcularSueldoBruto();
 	
 	public int calcularEdad() {

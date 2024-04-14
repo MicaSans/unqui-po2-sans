@@ -3,7 +3,7 @@ package ar.edu.unq.poo2.tp2;
 import java.time.LocalDate;
 
 public class EmpleadoContratado extends Empleado {
-
+	
 	//Variables de instancia
 	private int numeroDeContrato;
 	private String medioDePago;

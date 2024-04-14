@@ -3,7 +3,7 @@ package ar.edu.unq.poo2.tp2;
 import java.time.LocalDate;
 
 public class EmpleadoPermanente extends Empleado {
-	
+
 	//Variables de instancia
 	private int cantidadDeHijos;
 	private int antiguedad;
@@ -24,7 +24,7 @@ public class EmpleadoPermanente extends Empleado {
 		int tieneConyuge = 0;
 		if (this.conyuge) {
 			tieneConyuge = 1;
-		};
+		}
 		float asignacionPorConyuge = tieneConyuge * 100;
 		return asignacionPorHijo + asignacionPorConyuge;
 	}
