@@ -20,7 +20,8 @@ class EmpleadoPermanenteTest {
 	}
 
 	@Test
-	void testCalcularSueldoBruto() {
+	void testCalcularSueldoBrutoEmpleadoPermanente() {
+		//Calculo el sueldo bruto del empleado
 		assertEquals(empleado1.calcularSueldoBruto(), 150730);
 	}
 

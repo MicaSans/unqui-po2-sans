@@ -1,23 +1,23 @@
 package ar.edu.unq.poo2.tp2;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class ReciboDeSueldo {
 	//Variables de instancia
-	private Date fechaDeEmision;
+	private LocalDate fechaDeEmision;
 	
 	//Constructor
-	private ReciboDeSueldo(Date fechaDeEmisionRecibo) {
+	public ReciboDeSueldo(LocalDate fechaDeEmisionRecibo) {
 		this.setFechaDeEmision(fechaDeEmisionRecibo);
 	}
 
 	//Getter
-	public Date getFechaDeEmision() {
+	public LocalDate getFechaDeEmision() {
 		return fechaDeEmision;
 	}
 
 	//Setter
-	public void setFechaDeEmision(Date fechaDeEmision) {
+	public void setFechaDeEmision(LocalDate fechaDeEmision) {
 		this.fechaDeEmision = fechaDeEmision;
 	}
 	

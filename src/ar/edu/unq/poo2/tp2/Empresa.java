@@ -22,6 +22,10 @@ public class Empresa {
 	public String getNombreEmpresa() {
 		return nombreEmpresa;
 	}
+	
+	public String getCuitEmpresa() {
+		return cuit;
+	}
 
 	public List<ReciboDeSueldo> getRecibosDeSueldo() {
 		return recibosDeSueldo;
