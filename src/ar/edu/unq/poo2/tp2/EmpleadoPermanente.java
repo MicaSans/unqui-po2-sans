@@ -1,4 +1,4 @@
-package ar.edu.unq.poo2.tp1;
+package ar.edu.unq.poo2.tp2;
 
 import java.time.LocalDate;
 
@@ -36,17 +36,17 @@ public class EmpleadoPermanente extends Empleado {
 	@Override
 	public float calcularObraSocial() {
 		// TODO Auto-generated method stub
-		float porcentajeSueldoBruto = (this.calcularSueldoBruto() * 10) / 100;
+		float porcentajeSueldoBasico = (this.getSueldoBasico() * 10) / 100;
 		int importePorHijo = this.cantidadDeHijos * 20;
 		
-		return porcentajeSueldoBruto + importePorHijo;
+		return porcentajeSueldoBasico + importePorHijo;
 	}
 
 	@Override
 	public float calcularAportesJubilatorios() {
 		// TODO Auto-generated method stub
-		float porcentajeSueldoBruto = (this.calcularSueldoBruto() * 15) / 100;
-		return porcentajeSueldoBruto;
+		float porcentajeSueldoBasico = (this.getSueldoBasico() * 15) / 100;
+		return porcentajeSueldoBasico;
 	}
 
 	@Override

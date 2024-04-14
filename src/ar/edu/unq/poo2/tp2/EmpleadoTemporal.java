@@ -1,15 +1,14 @@
-package ar.edu.unq.poo2.tp1;
+package ar.edu.unq.poo2.tp2;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class EmpleadoTemporal extends Empleado {
 	
-	private Date fechaFinEnPlanta;
+	private LocalDate fechaFinEnPlanta;
 	private int cantidadDeHorasExtra;
 
 	public EmpleadoTemporal(String nombreEmpleado, String direccionEmpleado, float sueldoBasicoEmpleado,
-			LocalDate fechaDeNacEmpleado, String estadoCivilEmpleado, Date fechaFinEmpleadoEnPlanta, int cantidadHorasExtraEmpleado) {
+			LocalDate fechaDeNacEmpleado, String estadoCivilEmpleado, LocalDate fechaFinEmpleadoEnPlanta, int cantidadHorasExtraEmpleado) {
 		super(nombreEmpleado, direccionEmpleado, sueldoBasicoEmpleado, fechaDeNacEmpleado, estadoCivilEmpleado);
 		// TODO Auto-generated constructor stub
 		this.setFechaFinEnPlanta(fechaFinEmpleadoEnPlanta);
@@ -23,20 +22,19 @@ public class EmpleadoTemporal extends Empleado {
 	@Override
 	public float calcularObraSocial() {
 		// TODO Auto-generated method stub
-		float porcentajeSueldoBruto = (this.calcularSueldoBruto() * 10) / 100;
+		float porcentajeSueldoBasico = (this.getSueldoBasico() * 10) / 100;
 		int edadEmpleado = this.calcularEdad();
 		if (edadEmpleado > 50) {
-			porcentajeSueldoBruto = porcentajeSueldoBruto + 25;
+			porcentajeSueldoBasico = porcentajeSueldoBasico + 25;
 		}
-		
-		return porcentajeSueldoBruto;
+		return porcentajeSueldoBasico;
 	}
 
 	@Override
 	public float calcularAportesJubilatorios() {
 		// TODO Auto-generated method stub
-		float porcentajeSueldoBruto = (this.calcularSueldoBruto() * 10) / 100;
-		return porcentajeSueldoBruto + (this.cantidadDeHorasExtra * 5);
+		float porcentajeSueldoBasico = (this.getSueldoBasico() * 10) / 100;
+		return porcentajeSueldoBasico + (this.cantidadDeHorasExtra * 5);
 	}
 
 	@Override
@@ -46,16 +44,16 @@ public class EmpleadoTemporal extends Empleado {
 		return sueldoBruto;
 	}
 
-	public Date getFechaFinEnPlanta() {
+	public LocalDate getFechaFinEnPlanta() {
 		return fechaFinEnPlanta;
 	}
 
-	public void setFechaFinEnPlanta(Date fechaFinEnPlanta) {
+	public void setFechaFinEnPlanta(LocalDate fechaFinEnPlanta) {
 		this.fechaFinEnPlanta = fechaFinEnPlanta;
 	}
 	
-	//public float getSueldoBasico() {
-	//	return super.getSueldoBasico();
-	//}
+	public float getSueldoBasico() {
+		return super.getSueldoBasico();
+	}
 
 }

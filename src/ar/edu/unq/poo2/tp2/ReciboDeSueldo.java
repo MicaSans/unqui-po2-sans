@@ -1,4 +1,4 @@
-package ar.edu.unq.poo2.tp1;
+package ar.edu.unq.poo2.tp2;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package ar.edu.unq.poo2.tp1;
+package ar.edu.unq.poo2.tp2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ public class Empresa {
 	//Variables de instancia
 	private String nombreEmpresa;
 	private String cuit;
-	private List<Empleado> empleados; //Lista de empleados de la empresa
+	private List<Empleado> empleados; //Lista de empleados totales de la empresa
 	private List<ReciboDeSueldo> recibosDeSueldo;
 	
 	//Constructor
@@ -27,14 +27,16 @@ public class Empresa {
 		return recibosDeSueldo;
 	}
 	
+	public List<Empleado> getEmpleados(){
+		return empleados;
+	}
+	
 	//Setters
 	private void setCuit(String cuitEmpresa) {
-		// TODO Auto-generated method stub
 		this.cuit = cuitEmpresa;
 	}
 
 	private void setNombre(String nombre) {
-		// TODO Auto-generated method stub
 		this.setNombreEmpresa(nombre);
 	}
 
@@ -44,6 +46,10 @@ public class Empresa {
 	
 	public void setRecibosDeSueldo(List<ReciboDeSueldo> recibosDeSueldo) {
 		this.recibosDeSueldo = recibosDeSueldo;
+	}
+
+	public void setEmpleados(List<Empleado> empleados) {
+		this.empleados = empleados;
 	}
 	
 	//Metodos
@@ -69,5 +75,17 @@ public class Empresa {
 			totalRet += empleado.calcularRetenciones();
 		}
 		return totalRet;
+	}
+	
+	public int totalEmpleados() {
+		return empleados.size();
+	}
+	
+	public void contratarEmpleado(Empleado empleado) {
+		empleados.add(empleado);
+	}
+	
+	public void desvincularEmpleado(Empleado empleado) {
+		empleados.remove(empleado);
 	}
 }
