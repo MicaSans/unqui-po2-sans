@@ -16,7 +16,7 @@ public class Persona {
 		this.nombre = nombrePersona;
 		this.fechaDeNacimiento = fechaNacPersona;
 		//Agrego apellido para Ejercicio11
-		this.apellido = apellidoPersona;
+		this.setApellido(apellidoPersona);
 	}
 	
 	//Metodos
@@ -44,5 +44,15 @@ public class Persona {
 			return true;
 		}
 		return false;
+	}
+
+	//Getter
+	public String getApellido() {
+		return apellido;
+	}
+
+	//Setter
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
 	}
 }
