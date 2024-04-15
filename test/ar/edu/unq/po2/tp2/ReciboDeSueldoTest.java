@@ -1,8 +1,12 @@
-package ar.edu.unq.poo2.tp2;
+package ar.edu.unq.po2.tp2;
 
 import java.time.LocalDate;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import ar.edu.unq.po2.tp2.EmpleadoPermanente;
+import ar.edu.unq.po2.tp2.Empresa;
+import ar.edu.unq.po2.tp2.ReciboDeSueldo;
 
 class ReciboDeSueldoTest {
 

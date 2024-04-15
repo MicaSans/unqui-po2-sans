@@ -1,4 +1,4 @@
-package ar.edu.unq.poo2.tp2;
+package ar.edu.unq.po2.tp2;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,6 +7,11 @@ import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import ar.edu.unq.po2.tp2.Empleado;
+import ar.edu.unq.po2.tp2.EmpleadoPermanente;
+import ar.edu.unq.po2.tp2.EmpleadoTemporal;
+import ar.edu.unq.po2.tp2.Empresa;
 
 class EmpresaTest {
 

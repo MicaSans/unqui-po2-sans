@@ -1,10 +1,12 @@
-package ar.edu.unq.poo2.tp2;
+package ar.edu.unq.po2.tp2;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.LocalDate;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import ar.edu.unq.po2.tp2.EmpleadoTemporal;
 
 class EmpleadoTest {
 
