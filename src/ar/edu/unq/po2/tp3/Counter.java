@@ -31,4 +31,50 @@ public class Counter {
 		}
 		return contadorDeImpares;
 	}
+
+	public int mayorNumeroConDigitosPares() {
+		Integer numeroMaximo = 0;
+		int cantidadMaxima = 0;
+		for (Integer numero : contador) {
+			Integer numeroRecorrido = numero;
+			int contadorDeNumeros = 0;
+			while (numeroRecorrido >= 1) {
+				int restante = (int)(numeroRecorrido % 10);
+				if(this.esPar(restante) && restante != 0) {
+					contadorDeNumeros ++;
+				}
+				numeroRecorrido = (numeroRecorrido - restante)/10;
+			}
+			if(contadorDeNumeros > cantidadMaxima) {
+				cantidadMaxima = contadorDeNumeros;
+				numeroMaximo = numero;
+			}
+		}
+		return numeroMaximo;
+	}
+
+	public int multiplosEntre(int x, int y) {
+		int numeroMax = 0;
+		int numeroMin = 0;
+		if(x > y) {
+			numeroMax = x;
+			numeroMin = y;
+		}else {
+			numeroMax = y;
+			numeroMin = x;
+		}
+		if(numeroMax % numeroMin != 0) {
+			return -1;
+		}else {
+			return this.mayorNumeroMultiploEntre(numeroMax,numeroMin);
+		}
+	}
+
+	private int mayorNumeroMultiploEntre(int x, int y) {
+		int indice = 1000;
+		while(indice % x != 0 || indice % y != 0) {
+			indice --;
+		}
+		return indice;
+	}
 }
