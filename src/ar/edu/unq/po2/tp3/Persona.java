@@ -8,14 +8,22 @@ public class Persona {
 	//Variables de instancia
 	private String nombre;
 	private LocalDate fechaDeNacimiento;
+	//Agrego apellido para Ejercicio11
+	private String apellido;
 	
 	//Constructores
-	public Persona(String nombrePersona, LocalDate fechaNacPersona) {
+	public Persona(String nombrePersona, LocalDate fechaNacPersona, String apellidoPersona) { //Agrego apellido para Ejercicio11
 		this.nombre = nombrePersona;
 		this.fechaDeNacimiento = fechaNacPersona;
+		//Agrego apellido para Ejercicio11
+		this.apellido = apellidoPersona;
 	}
 	
 	//Metodos
+	public Persona crearPersona(String nombreP, LocalDate fechaNacP, String apellidoP) {
+		return new Persona (nombreP, fechaNacP, apellidoP);//Agrego apellido para Ejercicio11
+	}
+	
 	public String obtenerNombre() {
 		return this.nombre;
 	}

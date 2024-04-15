@@ -16,8 +16,8 @@ class PersonaTest {
 	@BeforeEach
 	void setUp() throws Exception {
 		//Creo una persona
-		persona1 = new Persona("Juan",LocalDate.of(1991, 10, 9));
-		persona2 = new Persona("Maria",LocalDate.of(1988, 7, 30));
+		persona1 = new Persona("Juan",LocalDate.of(1991, 10, 9),"Gomez");//Agrego apellido para Ejercicio11
+		persona2 = new Persona("Maria",LocalDate.of(1988, 7, 30),"Perez");// Agrego apellido para Ejercicio11
 	}
 
 	@Test
@@ -29,5 +29,10 @@ class PersonaTest {
 	@Test
 	void testMenorQue() {
 		assertTrue(persona1.menorQue(persona2));
+	}
+	
+	@Test
+	void testEquipoDeTrabajo() {
+		
 	}
 }
