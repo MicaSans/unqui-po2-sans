@@ -6,8 +6,6 @@ import java.time.LocalDate;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import ar.edu.unq.po2.tp2.EmpleadoTemporal;
-
 class EmpleadoTest {
 
 	//Variable de instancia
