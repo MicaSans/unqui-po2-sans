@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 class ServicioTest {
 
 	//Variables de instancia
-	private Factura servicio;
+	private Servicio servicio;
 		
 	@BeforeEach
 	void setUp() throws Exception {
@@ -17,10 +17,11 @@ class ServicioTest {
 	}
 
 	@Test
-	void testImpuesto() {
+	void testServicio() {
 		//Se testea que los metodos den como resultado los valores asignados al servicio
 		assertEquals("Movistar", servicio.getNombre());
 		assertEquals(23000d, servicio.getImporte());
+		assertEquals(2, servicio.getCantidadUnidades());
 	}
 	
 	@Test
