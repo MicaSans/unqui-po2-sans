@@ -8,11 +8,15 @@ public class Caja {
 	//Variables de instancia
 	private List<Producto> productosVendidos;
 	private Double montoTotal;
+	//Agregado para ejercicio 2
+	private List<Factura> facturasCobradas;
 	
 	//Constructor
 	public Caja() {
 	this.productosVendidos = new ArrayList<Producto>();
 	this.setMontoTotal(0d);
+	//Agregado para ejercicio 2
+	this.facturasCobradas = new ArrayList<Factura>();
 	}
 	
 	//Metodos		
@@ -26,7 +30,13 @@ public class Caja {
 		}
 		this.setMontoTotal(this.getMontoTotal() + producto.getPrecioBase());
 	}
+	//Agregado para ejercicio 2
+	public void registrarFactura(Factura factura) {
+		facturasCobradas.add(factura);
+		this.setMontoTotal(this.getMontoTotal() + factura.getImporte());
+	}
 
+	//Getters y setters
 	public Double getMontoTotal() {
 		return montoTotal;
 	}
